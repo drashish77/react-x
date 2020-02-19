@@ -1,22 +1,27 @@
 import React, { Component } from "react";
 
 class Message extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
     this.state = {
-      message: "Welcome Visitor"
+      message: "I care for you"
     };
   }
-  changeMessage = () => {
-    this.setState({
-      message: "Thanks for Visiting"
-    });
-  };
+  increaseMessage() {
+    this.setState(prevState => ({
+      message: prevState.message + "💖💕💓"
+    }));
+    // this.setState({
+    //   message: "This is awesome"
+    // });
+  }
+
   render() {
     return (
       <div>
-        <h1>{this.state.message} </h1>
-        <button onClick={() => this.changeMessage()}>Subscribe</button>
+        <p>My message is: {this.state.message}</p>
+        <button onClick={() => this.increaseMessage()}>Inc Message</button>
       </div>
     );
   }
