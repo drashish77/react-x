@@ -34,7 +34,7 @@ const PersonList = () => {
       skill: "Household"
     }
   ];
-  const personList = persons.map(i => <Person i={i} />);
+  const personList = persons.map(i => <Person key={i.id} i={i} />);
   return <div>{personList}</div>;
 };
 

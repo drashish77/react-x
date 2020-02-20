@@ -12,11 +12,22 @@ import ParentComponent from "./components/ParentComponent";
 import UserGreeting from "./components/UserGreeting";
 import NameList from "./components/NameList";
 import PersonList from "./components/PersonList";
-
+import Stylesheet from "./components/Stylesheet";
+import InlineCSS from "./components/InlineCSS";
+import styles from "./appStyle.module.css";
+import "./appStyle.css";
+import Form from "./components/Form";
+import LifeCycleA from "./components/LifeCycleA";
 function App() {
   return (
     <div className="App">
-      <PersonList />
+      <LifeCycleA />
+      {/* <Form /> */}
+      {/* <h1 className="error">Error</h1>
+      <h2 className={styles.success}>Success</h2> */}
+      {/* <InlineCSS /> */}
+      {/* <Stylesheet primary={false} /> */}
+      {/* <PersonList /> */}
       {/* <NameList /> */}
       {/* <UserGreeting /> */}
       {/* <ParentComponent /> */}
